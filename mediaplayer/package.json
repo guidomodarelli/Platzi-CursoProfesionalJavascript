@@ -1,0 +1,19 @@
+{
+  "name": "@guidomodarelli/mediaplayer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/MediaPlayer.js",
+  "scripts": {
+    "build": "tsc src/**/*.ts src/plugins/*.ts src/plugins/**/*.ts --outDir lib",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "personal"
+  ],
+  "author": "Guido Modarelli <guidomodarelli25@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.0.3"
+  },
+  "dependencies": {}
+}
