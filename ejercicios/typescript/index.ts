@@ -6,6 +6,23 @@ function add(a: number, b: number): number {
 
 const sum = add(2, 3);
 
+function createAdder(a: number): (number) => number {
+  return function (b: number) {
+    return b + a;
+  };
+}
+
+const addFour = createAdder(4)
+const fourPlus6 = addFour(6);
+
+function fullName(firstname:string, lastname:string = 'Smith') {
+  return `${firstname} ${lastname}`
+}
+
+const richard = fullName('Agente')
+console.log(richard);
+
+
 // Arreglos
 let people: string[] = [];
 people = ['Isabel', 'Nicole', 'Raul'];
