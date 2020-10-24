@@ -12,7 +12,7 @@ class AutoPause {
     });
     observer.observe(this.player.media);
 
-    document.addEventListener("visibilitychange", this.handleVisibilityChange);
+    document.addEventListener('visibilitychange', this.handleVisibilityChange);
   }
 
   handleIntersection(entries) {
@@ -28,7 +28,7 @@ class AutoPause {
   }
 
   handleVisibilityChange() {
-    const isVisible = document.visibilityState === "visible";
+    const isVisible = document.visibilityState === 'visible';
     if (isVisible) {
       this.player.play();
     } else {

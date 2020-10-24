@@ -32,7 +32,7 @@
         stopButton.disabled = true;
       }
 
-      loadButton.onclick = async function() {
+      loadButton.onclick = async function () {
         startLoading();
 
         controller = new AbortController();
@@ -49,7 +49,7 @@
         stopLoading();
       };
 
-      stopButton.onclick = function() {
+      stopButton.onclick = function () {
         controller.abort();
         stopLoading();
       };
