@@ -12,16 +12,15 @@ function createAdder(a: number): (number) => number {
   };
 }
 
-const addFour = createAdder(4)
+const addFour = createAdder(4);
 const fourPlus6 = addFour(6);
 
-function fullName(firstname:string, lastname:string = 'Smith') {
-  return `${firstname} ${lastname}`
+function fullName(firstname: string, lastname: string = 'Smith') {
+  return `${firstname} ${lastname}`;
 }
 
-const richard = fullName('Agente')
+const richard = fullName('Agente');
 console.log(richard);
-
 
 // Arreglos
 let people: string[] = [];
@@ -48,3 +47,30 @@ comdin = { type: 'Wildcard' };
 
 // Object
 let someObject: object = { type: 'Wildcard' };
+
+interface Rectangulo {
+  ancho: number;
+  alto: number;
+  color?: Color;
+}
+
+let rect: Rectangulo = {
+  ancho: 4,
+  alto: 3,
+  color: Color.Rojo,
+};
+
+function area(r: Rectangulo) {
+  return r.alto * r.ancho;
+}
+
+const areaRect = area(rect);
+console.log(areaRect);
+
+console.log(rect.toString());
+
+rect.toString = function () {
+  return this.color ? `Un rectangulo ${this.color}` : `Un rectangulo`;
+};
+
+console.log(rect.toString());
